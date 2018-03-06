@@ -5,13 +5,26 @@
 }
 html {
   font-size: 62.5%;
-  background: radial-gradient(ellipse at center, $base 0, $darken 80%, $back 100%);
 }
 body {
   font: 300 12px/1.4 'Helvetica Neue', Helvetica, Arial;
-  color: $white;
-  transition: all .4s .3s ease-in;
 }
 body,html{
 	min-height: 100vh;
+}
+
+.column {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .bm_container {
+    cursor: pointer;
+    width: 20vw;
+    height: 20vw;
+    background-color: #bfadbb;
+    margin: 10px;
+  }
 }

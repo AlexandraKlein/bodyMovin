@@ -1,9 +1,24 @@
-(function ($, window, document, undefined) {
+var elementsArr = ['ambulance','apple','atoms','bandaid','bicycle','bottle','cross','eye','female_doctor','female_nurse','male_doctor','male_nurse','dropper','heart','mobile','pills','stethoscope','syringe','thermometer','tubes'];
 
-  'use strict';
+var element, anim = [];
 
-  $(function () {
-    // FastShell
-  });
+for(var i=0; i<elementsArr.length; i+=1){
+  element = document.getElementById(elementsArr[i]);
+  var params = {
+    container: document.getElementById(elementsArr[i]),
+    autoplay:false,
+    loop:false,
+    animationData:animations[elementsArr[i]],
+    renderer:'svg'
+  };
+  anim[elementsArr[i]] = bodymovin.loadAnimation(params);
+}
 
-})(jQuery, window, document);
+
+$('.bm_container').mouseenter(function(){
+  anim[$(this).attr('id')].play();
+});
+
+$('.bm_container').mouseleave(function(){
+  anim[$(this).attr('id')].goToAndStop(0);
+});
