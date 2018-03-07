@@ -1,24 +1,10 @@
-var elementsArr = ['ambulance','apple','atoms','bandaid','bicycle','bottle','cross','eye','female_doctor','female_nurse','male_doctor','male_nurse','dropper','heart','mobile','pills','stethoscope','syringe','thermometer','tubes'];
+var animData = {
+  container: document.getElementById('test'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: 'bodymovin/data.json'
+};
+var anim = bodymovin.loadAnimation(animData);
 
-var element, anim = [];
-
-for(var i=0; i<elementsArr.length; i+=1){
-  element = document.getElementById(elementsArr[i]);
-  var params = {
-    container: document.getElementById(elementsArr[i]),
-    autoplay:false,
-    loop:false,
-    animationData:animations[elementsArr[i]],
-    renderer:'svg'
-  };
-  anim[elementsArr[i]] = bodymovin.loadAnimation(params);
-}
-
-
-$('.bm_container').mouseenter(function(){
-  anim[$(this).attr('id')].play();
-});
-
-$('.bm_container').mouseleave(function(){
-  anim[$(this).attr('id')].goToAndStop(0);
-});
+anim.play();

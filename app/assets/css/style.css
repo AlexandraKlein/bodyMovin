@@ -54,7 +54,8 @@ body {
   font: 300 12px/1.4 'Helvetica Neue', Helvetica, Arial; }
 
 body, html {
-  min-height: 100vh; }
+  min-height: 100vh;
+  background: black; }
 
 .column {
   width: 80%;
