@@ -11,7 +11,7 @@ var animData = {
   renderer: 'svg',
   loop: true,
   autoplay: true,
-  path: 'bodymovin/data.json'
+  animationData: animations.road
 };
 var anim = bodymovin.loadAnimation(animData);
 
