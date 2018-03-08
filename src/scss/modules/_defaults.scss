@@ -14,18 +14,9 @@ body,html{
   background: black;
 }
 
-.column {
-  width: 80%;
+.bm_container {
+  cursor: pointer;
+  width: 30vw;
+  height: 30vw;
   margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  .bm_container {
-    cursor: pointer;
-    width: 20vw;
-    height: 20vw;
-    background-color: #bfadbb;
-    margin: 10px;
-  }
 }

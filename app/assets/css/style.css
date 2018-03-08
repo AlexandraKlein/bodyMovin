@@ -57,21 +57,11 @@ body, html {
   min-height: 100vh;
   background: black; }
 
-.column {
-  width: 80%;
-  margin: auto;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: center;
-      justify-content: center; }
-  .column .bm_container {
-    cursor: pointer;
-    width: 20vw;
-    height: 20vw;
-    background-color: #bfadbb;
-    margin: 10px; }
+.bm_container {
+  cursor: pointer;
+  width: 30vw;
+  height: 30vw;
+  margin: auto; }
 
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
